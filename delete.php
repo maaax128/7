@@ -1,7 +1,7 @@
 <?php
 session_start();
 include('actions/functionRedirect.php');
-$fileList = glob('uploads/*.json');
+$fileList = glob('files/*.json');
 foreach ($fileList as $key => $value) {
             $fileTest = file_get_contents($fileList[$key]);
         $decodeFile = json_decode($fileTest, true);
