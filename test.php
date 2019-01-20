@@ -35,6 +35,31 @@ if (isset($_GET['test'])) {
 <head>
     <meta charset="utf-8">
     <title>Генератор тестов на PHP и JSON</title>
+    <style>
+      .img {
+        width: 400px;
+        position : relative;
+       }
+       .img h2 { 
+        display: block;
+        position: absolute; 
+        text-align: center;
+        top: 20%; 
+        left: 0;
+        right: 0;
+        margin: auto;
+       }
+       .img p { 
+        position: absolute;
+        text-align: center;
+        left: 0;
+        right: 0;
+        margin: auto;
+        line-height: 1.5;
+        top: 40%; 
+       }
+
+    </style>
 </head>
 <body>
 
@@ -108,14 +133,7 @@ $name=clean($_SESSION['name']);
 if ($result === $correct) {
 ?>
       <div class="img">
-      <img src="images/sert2.phpp">
-      <?php 
-      $sert = imagecreatetruecolor(200, 200);
-      imagepng($sert);
-
-
-      ?>
-      <img src="\image\sert2.php">
+      <img src="image/sert2.php">     
       <h2><?=$name?></h2>
                         
                         
