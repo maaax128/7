@@ -1,13 +1,13 @@
 <?php
 session_start();
 include('actions/functionRedirect.php');
-if (isset($_POST['add']) && empty($_FILES['testfile']['name'])) {
+if (isset($_POST['add']) && empty($_FILES['userfile']['name'])) {
     header("Location:admin.php");
     exit;
 }
-elseif (isset($_POST) && isset($_FILES) && isset($_FILES['testfile'])) {
-    $fileName = $_FILES['testfile']['name'];
-    $tmpFile = $_FILES['testfile']['tmp_name'];
+elseif (isset($_POST) && isset($_FILES) && isset($_FILES['userfile'])) {
+    $fileName = $_FILES['userfile']['name'];
+    $tmpFile = $_FILES['userfile']['tmp_name'];
 	$uploaddir = 'files/';
 	if (!file_exists("$uploaddir")) {
 	mkdir("$uploaddir", 0700);
